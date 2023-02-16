@@ -34,11 +34,13 @@ def test_osc_control_delta():
     for k in obs:
         print(k, obs[k].shape)
 
-    for i in range(300):
+    for i in range(350):
         # action = np.random.randn(7, )  # sample random action
         action = np.array([0, 0, -0.05, 0, 0, 0, -1])
+
         obs, reward, done, info = env.step(action)  # take action in the environment
         env.render()  # render on display
+        time.sleep(0.015)
         print("end-effector position: ", obs["robot0_eef_pos"])
 
 

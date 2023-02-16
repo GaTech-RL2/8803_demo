@@ -76,5 +76,5 @@ def test_osc_control_delta():
         print("end-effector position: ", obs["robot0_eef_pos"])
 
 
-test_osc_control_delta()
+# test_osc_control_delta()
 # test_osc_control()
